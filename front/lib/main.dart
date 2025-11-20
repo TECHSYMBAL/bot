@@ -1119,127 +1119,6 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           width: double.infinity,
                           padding: const EdgeInsets.only(
-                              top: 15, bottom: 15, left: 15, right: 15),
-                          child: Column(children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                const Text('Sell',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w300,
-                                      color: Color(0xFF818181),
-                                      fontSize: 20,
-                                    )),
-                                SizedBox(
-                                  height: 20,
-                                  child: SingleChildScrollView(
-                                    scrollDirection: Axis.horizontal,
-                                    child: Row(
-                                      children: [
-                                        Image.asset('assets/sample/1.png',
-                                            width: 20,
-                                            height: 20,
-                                            fit: BoxFit.contain),
-                                        const SizedBox(width: 5),
-                                        Image.asset('assets/sample/2.png',
-                                            width: 20,
-                                            height: 20,
-                                            fit: BoxFit.contain),
-                                        const SizedBox(width: 5),
-                                        Image.asset('assets/sample/3.png',
-                                            width: 20,
-                                            height: 20,
-                                            fit: BoxFit.contain),
-                                        const SizedBox(width: 5),
-                                        Image.asset('assets/sample/4.png',
-                                            width: 20,
-                                            height: 20,
-                                            fit: BoxFit.contain),
-                                        const SizedBox(width: 5),
-                                        Image.asset('assets/sample/5.png',
-                                            width: 20,
-                                            height: 20,
-                                            fit: BoxFit.contain),
-                                      ],
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            const SizedBox(height: 15),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                const Text('1',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 20,
-                                      color: Color(0xFFE4E4E4),
-                                    )),
-                                Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Image.asset('assets/sample/usdt.png',
-                                        width: 20,
-                                        height: 20,
-                                        fit: BoxFit.contain),
-                                    const SizedBox(width: 8),
-                                    const Text('usdt',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w300,
-                                          color: Color(0xFFE4E4E4),
-                                          fontSize: 20,
-                                        )),
-                                    const SizedBox(width: 8),
-                                    SvgPicture.asset(
-                                      'assets/icons/select.svg',
-                                      width: 5,
-                                      height: 10,
-                                      colorFilter: const ColorFilter.mode(
-                                        Color(0xFFE4E4E4),
-                                        BlendMode.srcIn,
-                                      ),
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                            const SizedBox(height: 15),
-                            const Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text('of 300.67 usdt on ton',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 15,
-                                        color: Color(0xFF818181),
-                                      )),
-                                  Text(r'$1',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 15,
-                                        color: Color(0xFF818181),
-                                      )),
-                                ]),
-                          ]),
-                        ),
-                        Container(
-                          width: double.infinity,
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 0, horizontal: 15),
-                          child: SvgPicture.asset(
-                            'assets/icons/rotate.svg',
-                            width: 30,
-                            height: 30,
-                          ),
-                        ),
-                        Container(
-                          width: double.infinity,
-                          padding: const EdgeInsets.only(
                               top: 15, bottom: 0, left: 15, right: 15),
                           child: Column(children: [
                             Row(
@@ -1334,6 +1213,127 @@ class _HomePageState extends State<HomePage> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text('now 11 ton on ton',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 15,
+                                        color: Color(0xFF818181),
+                                      )),
+                                  Text(r'$1',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 15,
+                                        color: Color(0xFF818181),
+                                      )),
+                                ]),
+                          ]),
+                        ),
+                        Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 0, horizontal: 15),
+                          child: SvgPicture.asset(
+                            'assets/icons/rotate.svg',
+                            width: 30,
+                            height: 30,
+                          ),
+                        ),
+                        Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.only(
+                              top: 15, bottom: 15, left: 15, right: 15),
+                          child: Column(children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                const Text('Sell',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w300,
+                                      color: Color(0xFF818181),
+                                      fontSize: 20,
+                                    )),
+                                SizedBox(
+                                  height: 20,
+                                  child: SingleChildScrollView(
+                                    scrollDirection: Axis.horizontal,
+                                    child: Row(
+                                      children: [
+                                        Image.asset('assets/sample/1.png',
+                                            width: 20,
+                                            height: 20,
+                                            fit: BoxFit.contain),
+                                        const SizedBox(width: 5),
+                                        Image.asset('assets/sample/2.png',
+                                            width: 20,
+                                            height: 20,
+                                            fit: BoxFit.contain),
+                                        const SizedBox(width: 5),
+                                        Image.asset('assets/sample/3.png',
+                                            width: 20,
+                                            height: 20,
+                                            fit: BoxFit.contain),
+                                        const SizedBox(width: 5),
+                                        Image.asset('assets/sample/4.png',
+                                            width: 20,
+                                            height: 20,
+                                            fit: BoxFit.contain),
+                                        const SizedBox(width: 5),
+                                        Image.asset('assets/sample/5.png',
+                                            width: 20,
+                                            height: 20,
+                                            fit: BoxFit.contain),
+                                      ],
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                            const SizedBox(height: 15),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                const Text('1',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 20,
+                                      color: Color(0xFFE4E4E4),
+                                    )),
+                                Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Image.asset('assets/sample/usdt.png',
+                                        width: 20,
+                                        height: 20,
+                                        fit: BoxFit.contain),
+                                    const SizedBox(width: 8),
+                                    const Text('usdt',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w300,
+                                          color: Color(0xFFE4E4E4),
+                                          fontSize: 20,
+                                        )),
+                                    const SizedBox(width: 8),
+                                    SvgPicture.asset(
+                                      'assets/icons/select.svg',
+                                      width: 5,
+                                      height: 10,
+                                      colorFilter: const ColorFilter.mode(
+                                        Color(0xFFE4E4E4),
+                                        BlendMode.srcIn,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                            const SizedBox(height: 15),
+                            const Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text('of 300.67 usdt on ton',
                                       style: TextStyle(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 15,
