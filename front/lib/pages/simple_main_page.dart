@@ -51,18 +51,18 @@ class _SimpleMainPageState extends State<SimpleMainPage>
     
     return [
       {
+        'icon': 'assets/sample/mak/3.svg',
+        'primaryText': 'Robat',
+        'secondaryText': "Welcome! I’ve created a wallet for you.",
+        'timestamp': '7:55',
+        'rightText': null,
+      },
+      {
         'icon': r'assets/sample/mak/+1$.svg',
         'primaryText': 'Incoming task',
         'secondaryText': 'Send link with \$1 and get +\$1',
         'timestamp': '17:11',
         'rightText': 'N/A',
-      },
-      {
-        'icon': 'assets/sample/DLLR.svg',
-        'primaryText': 'Token granted',
-        'secondaryText': '\$1',
-        'timestamp': '13:17',
-        'rightText': '+1 DLLR',
       },
       {
         'icon': 'assets/sample/mak/1.svg',
@@ -72,11 +72,11 @@ class _SimpleMainPageState extends State<SimpleMainPage>
         'rightText': 'N/A',
       },
       {
-        'icon': 'assets/sample/mak/3.svg',
-        'primaryText': 'Welcome message',
-        'secondaryText': "We've created a wallet for you.",
-        'timestamp': '7:55',
-        'rightText': null,
+        'icon': 'assets/sample/DLLR.svg',
+        'primaryText': 'Token granted',
+        'secondaryText': '\$1',
+        'timestamp': '13:17',
+        'rightText': '+1 DLLR',
       },
     ];
   }
@@ -90,6 +90,19 @@ class _SimpleMainPageState extends State<SimpleMainPage>
         'secondaryText': 'Send link with \$1 and get +\$1',
         'timestamp': '17:11',
         'rightText': 'N/A',
+      },
+    ];
+  }
+
+  // Chat items data with SVG images
+  List<Map<String, dynamic>> get _chatItems {
+    return [
+      {
+        'icon': 'assets/sample/mak/3.svg',
+        'primaryText': 'Robat',
+        'secondaryText': "Welcome! I've created a wallet for you.",
+        'timestamp': '7:55',
+        'rightText': null,
       },
     ];
   }
@@ -754,6 +767,151 @@ class _SimpleMainPageState extends State<SimpleMainPage>
                                           CrossAxisAlignment.center,
                                       children: [
                                         // Feed item icon - 30px, centered vertically relative to 40px text columns
+                                        SvgPicture.asset(
+                                          item['icon'] as String,
+                                          width: 30,
+                                          height: 30,
+                                          fit: BoxFit.contain,
+                                        ),
+                                        const SizedBox(width: 10),
+                                        // Primary and secondary text column
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              SizedBox(
+                                                height: 20,
+                                                child: Align(
+                                                  alignment:
+                                                      Alignment.centerLeft,
+                                                  child: Text(
+                                                    item['primaryText'] as String,
+                                                    style: TextStyle(
+                                                      fontFamily: 'Aeroport',
+                                                      fontSize: 15,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      color: AppTheme.textColor,
+                                                      height: 1.0,
+                                                    ),
+                                                    textHeightBehavior:
+                                                        const TextHeightBehavior(
+                                                      applyHeightToFirstAscent:
+                                                          false,
+                                                      applyHeightToLastDescent:
+                                                          false,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 20,
+                                                child: Align(
+                                                  alignment:
+                                                      Alignment.centerLeft,
+                                                  child: Text(
+                                                    item['secondaryText'] as String,
+                                                    style: const TextStyle(
+                                                      fontFamily: 'Aeroport',
+                                                      fontSize: 15,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      color: Color(0xFF818181),
+                                                      height: 1.0,
+                                                    ),
+                                                    textHeightBehavior:
+                                                        const TextHeightBehavior(
+                                                      applyHeightToFirstAscent:
+                                                          false,
+                                                      applyHeightToLastDescent:
+                                                          false,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        // Timestamp and right text column (right-aligned)
+                                        Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.end,
+                                          children: [
+                                            SizedBox(
+                                              height: 20,
+                                              child: Align(
+                                                alignment:
+                                                    Alignment.centerRight,
+                                                child: Text(
+                                                  item['timestamp'] as String,
+                                                  style: TextStyle(
+                                                    fontFamily: 'Aeroport',
+                                                    fontSize: 15,
+                                                    fontWeight: FontWeight.w500, // medium
+                                                    color: AppTheme.textColor,
+                                                    height: 1.0,
+                                                  ),
+                                                  textAlign: TextAlign.right,
+                                                  textHeightBehavior:
+                                                      const TextHeightBehavior(
+                                                    applyHeightToFirstAscent:
+                                                        false,
+                                                    applyHeightToLastDescent:
+                                                        false,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 20,
+                                              child: item['rightText'] != null
+                                                  ? Align(
+                                                      alignment:
+                                                          Alignment.centerRight,
+                                                      child: Text(
+                                                        item['rightText'] as String,
+                                                        style: const TextStyle(
+                                                          fontFamily: 'Aeroport',
+                                                          fontSize: 15,
+                                                          fontWeight: FontWeight.w400,
+                                                          color: Color(0xFF818181),
+                                                          height: 1.0,
+                                                        ),
+                                                        textAlign: TextAlign.right,
+                                                        textHeightBehavior:
+                                                            const TextHeightBehavior(
+                                                          applyHeightToFirstAscent:
+                                                              false,
+                                                          applyHeightToLastDescent:
+                                                              false,
+                                                        ),
+                                                      ),
+                                                    )
+                                                  : const SizedBox.shrink(),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              }).toList(),
+                            ),
+                          // Chat list - shown when Chat tab is selected
+                          if (_selectedTab == 'Chat')
+                            Column(
+                              children: _chatItems.map((item) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(bottom: 20),
+                                  child: Container(
+                                    padding:
+                                        const EdgeInsets.symmetric(vertical: 0),
+                                    child: Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        // Chat item icon - 30px, centered vertically relative to 40px text columns
                                         SvgPicture.asset(
                                           item['icon'] as String,
                                           width: 30,
