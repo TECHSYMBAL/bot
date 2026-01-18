@@ -3,7 +3,7 @@ import 'theme/app_theme.dart';
 import '../utils/page_transitions.dart';
 import '../widgets/global/global_logo_bar.dart';
 import '../widgets/global/global_bottom_bar.dart';
-import '../pages/simple_main_page.dart';
+import '../pages/main_page.dart';
 import '../analytics.dart';
 
 class MyApp extends StatefulWidget {
@@ -170,7 +170,7 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const SimpleMainPage(),
+      home: const MainPage(),
         );
       },
     );

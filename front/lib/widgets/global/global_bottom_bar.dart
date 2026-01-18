@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../app/theme/app_theme.dart';
-import '../../analytics.dart';
-import '../../pages/new_page.dart';
+// TODO: AI functionality will be rebuilt from scratch
+// import '../../pages/new_page.dart';
+// import '../../analytics.dart';
 
 // Global bottom bar widget that appears on all pages
 class GlobalBottomBar extends StatefulWidget {
@@ -48,23 +49,14 @@ class _GlobalBottomBarState extends State<GlobalBottomBar> {
   void _navigateToNewPage() {
     final text = _controller.text.trim();
     if (text.isNotEmpty) {
-      VercelAnalytics.trackEvent('question_submitted', properties: {
-        'question_length': text.length.toString(),
-      });
-
-      VercelAnalytics.trackPageView(path: '/response', title: 'Response');
-
-      Navigator.push(
-        context,
-        PageRouteBuilder(
-          pageBuilder: (context, animation, secondaryAnimation) => NewPage(title: text),
-          transitionDuration: Duration.zero,
-          reverseTransitionDuration: Duration.zero,
-        ),
-      ).then((_) {
-        _controller.clear();
-        VercelAnalytics.trackPageView(path: '/', title: 'Home');
-      });
+      // TODO: AI functionality removed - will be rebuilt from scratch
+      // For now, just clear the text field
+      _controller.clear();
+      
+      // Optional: Show a placeholder message or snackbar
+      // ScaffoldMessenger.of(context).showSnackBar(
+      //   const SnackBar(content: Text('AI functionality coming soon...')),
+      // );
     }
   }
 

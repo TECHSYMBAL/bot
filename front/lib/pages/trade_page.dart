@@ -92,7 +92,7 @@ class _TradePageState extends State<TradePage> with TickerProviderStateMixin {
     _bgController.dispose();
     _noiseController.dispose();
     
-    // Hide back button when leaving swap page
+    // Hide back button when leaving trade page
     try {
       tma.WebApp().backButton.hide();
     } catch (e) {

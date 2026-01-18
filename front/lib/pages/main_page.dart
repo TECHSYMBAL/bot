@@ -4,18 +4,18 @@ import 'dart:math' as math;
 import '../app/theme/app_theme.dart';
 import '../widgets/global/global_logo_bar.dart';
 import '../telegram_safe_area.dart';
-import 'home_page.dart';
+import 'swap_page.dart';
 import 'trade_page.dart';
 import 'wallets_page.dart';
 
-class SimpleMainPage extends StatefulWidget {
-  const SimpleMainPage({super.key});
+class MainPage extends StatefulWidget {
+  const MainPage({super.key});
 
   @override
-  State<SimpleMainPage> createState() => _SimpleMainPageState();
+  State<MainPage> createState() => _MainPageState();
 }
 
-class _SimpleMainPageState extends State<SimpleMainPage>
+class _MainPageState extends State<MainPage>
     with TickerProviderStateMixin {
   // Helper method to calculate adaptive bottom padding
   double _getAdaptiveBottomPadding() {
@@ -299,7 +299,7 @@ class _SimpleMainPageState extends State<SimpleMainPage>
               final topPadding = GlobalLogoBar.getContentTopPadding();
               final logoBlockHeight = GlobalLogoBar.getLogoBlockHeight();
               final bottomBarHeight = _getGlobalBottomBarHeight();
-              print('[SimpleMainPage] Applying content top padding: $topPadding');
+              print('[MainPage] Applying content top padding: $topPadding');
               return Stack(
                 children: [
                   Padding(
@@ -483,10 +483,11 @@ class _SimpleMainPageState extends State<SimpleMainPage>
                               Expanded(
                                 child: GestureDetector(
                                   onTap: () {
+                                    // Navigate to SwapPage
                                     Navigator.push(
                                       context,
                                       PageRouteBuilder(
-                                        pageBuilder: (context, animation, secondaryAnimation) => const HomePage(),
+                                        pageBuilder: (context, animation, secondaryAnimation) => const SwapPage(),
                                         transitionDuration: Duration.zero,
                                         reverseTransitionDuration: Duration.zero,
                                       ),

@@ -11,14 +11,14 @@ import '../widgets/global/global_logo_bar.dart';
 import '../widgets/common/diagonal_line_painter.dart';
 import '../telegram_safe_area.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class SwapPage extends StatefulWidget {
+  const SwapPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<SwapPage> createState() => _SwapPageState();
 }
 
-class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+class _SwapPageState extends State<SwapPage> with TickerProviderStateMixin {
   // Helper method to calculate adaptive bottom padding
   double _getAdaptiveBottomPadding() {
     final service = TelegramSafeAreaService();
